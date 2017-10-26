@@ -3,7 +3,7 @@ var data = [];
 //开奖时间
 var alldate = {
 	"c128":[2017,10,25],
-	"c129":[2017,10,27],
+	"c129":[2017,10,26],
 	"c130":[2017,10,30],
 	"c131":[2017,11,1],
 	"c132":[2017,11,3],
@@ -115,7 +115,7 @@ function getServerDate(){
 
 var curTimedata = alldate["c"+data[data.length-1].time];
 
-var curTime = new Date(curTimedata[0],curTimedata[1]-1,curTimedata[2],21,00,00) ;//当前期开奖时间
+var curTime = new Date(curTimedata[0],curTimedata[1]-1,curTimedata[2],22,59,00) ;//当前期开奖时间
 
 var nextTimedata = alldate["c"+(data[data.length-1].time+1)];
 
