@@ -99,7 +99,7 @@ data[11] = {
 }
 var curTimedata = alldate["c"+data[data.length-1].time];
 
-var curTime = new Date(curTimedata[0],curTimedata[1]-1,curTimedata[2],21,32,0) ;//当前期开奖时间
+var curTime = new Date(curTimedata[0],curTimedata[1]-1,curTimedata[2],21,37,0) ;//当前期开奖时间
 
 var nextTimedata = alldate["c"+(data[data.length-1].time+1)];
 
