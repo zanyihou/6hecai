@@ -5,7 +5,7 @@ var x =1;
 //开奖时间
 var alldate = {
 	"c128":[2017,10,25],
-	"c129":[2017,10,27],
+	"c129":[2017,10,26],
 	"c130":[2017,10,30],
 	"c131":[2017,11,1],
 	"c132":[2017,11,3],
@@ -99,7 +99,7 @@ data[11] = {
 }
 var curTimedata = alldate["c"+data[data.length-1].time];
 
-var curTime = new Date(curTimedata[0],curTimedata[1]-1,curTimedata[2],21,48,0) ;//当前期开奖时间
+var curTime = new Date(curTimedata[0],curTimedata[1]-1,curTimedata[2],21,52,0) ;//当前期开奖时间
 
 var nextTimedata = alldate["c"+(data[data.length-1].time+1)];
 
