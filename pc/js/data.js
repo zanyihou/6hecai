@@ -3,7 +3,7 @@ var data = [];
 //开奖时间
 var alldate = {
 	"c128":[2017,10,25],
-	"c129":[2017,10,26],
+	"c129":[2017,10,27],
 	"c130":[2017,10,30],
 	"c131":[2017,11,1],
 	"c132":[2017,11,3],
@@ -115,11 +115,11 @@ function getServerDate(){
 
 var curTimedata = alldate["c"+data[data.length-1].time];
 
-var curTime = new Date(curTimedata[0],curTimedata[1]-1,curTimedata[2],22,59,00) ;//当前期开奖时间
+var curTime = new Date(curTimedata[0],curTimedata[1]-1,curTimedata[2],21,0,0) ;//当前期开奖时间
 
 var nextTimedata = alldate["c"+(data[data.length-1].time+1)];
 
-var nextTime = new Date(nextTimedata[0],nextTimedata[1]-1,nextTimedata[2],21,00,00) ;;//下一期开奖时间
+var nextTime = new Date(nextTimedata[0],nextTimedata[1]-1,nextTimedata[2],21,0,0) ;;//下一期开奖时间
 
 var curNum = data[data.length-1].time; //当前期的期号;
 var nextNum = curNum + 1; //下一期的期号;
