@@ -46,7 +46,7 @@
 						<p>特码</p>
 					</div>
 					<div class="te">
-						<img src="item.src[6]" alt="">
+						<img :src="item.src[6]" alt="">
 						<p>{{item.type[6]}}</p>
 					</div>
 				</div>
