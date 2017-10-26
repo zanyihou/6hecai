@@ -22,7 +22,9 @@ $(function() {
 	 }
 
 	 //判断是否开了当前期，如果开了则在历史记录里面追加
-	 if(curTime - (new Date()) < 0){
+	 //if(curTime - (new Date()) < 0)
+	 if(curTime - getServerDate()) < 0)
+	 {
 	 	let htmlStr = `<li>
 						<ul>
 							<li><p class="pp11">`+data[data.length-1].time+`</p></li>

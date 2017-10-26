@@ -95,6 +95,24 @@ data[11] = {
 	num: [5,29,20,15,29,41,12],
 	type: ["蛇","羊","猴","羊","猴","羊","狗"]
 }
+
+
+//获取服务器时间
+function getServerDate(){
+	var xhr = null;
+	if(window.XMLHttpRequest){
+	xhr = new window.XMLHttpRequest();
+	}else{
+	xhr = new ActiveObject("Microsoft")
+	}
+
+	xhr.open("GET","/",false)
+	xhr.send(null);
+	var date = xhr.getResponseHeader("Date");
+	date = new Date(date);
+	return date;
+}
+
 var curTimedata = alldate["c"+data[data.length-1].time];
 
 var curTime = new Date(curTimedata[0],curTimedata[1]-1,curTimedata[2],21,00,00) ;//当前期开奖时间

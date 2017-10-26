@@ -16,10 +16,12 @@ $(function () {
 	var beingBool = false ; //是否正在开奖过程
 	timerFun(); //刚进页面的时候执行一次，不然会出现延时画面
 	function timerFun() {
-		var ts = curTime - (new Date());//计算当前期剩余的毫秒数
+		////var ts = curTime - (new Date());//计算当前期剩余的毫秒数
+		var ts = curTime - getServerDate();//计算当前期剩余的毫秒数
 		//当前期已经开奖了
 		if(ts < 0){
-			ts = nextTime - (new Date());//计算下一期剩余的毫秒数
+			/////ts = nextTime - (new Date());//计算下一期剩余的毫秒数
+			ts = nextTime - getServerDate();//计算下一期剩余的毫秒数
 			
 			//如果正在开奖过程中跳过下面的赋值
 			if(beingBool){
