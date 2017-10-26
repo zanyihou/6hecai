@@ -35,6 +35,22 @@ var alldate = {
 	"c156":[2017,12,29],
 };
 
+//获取服务器时间
+function getServerDate(){
+	var xhr = null;
+	if(window.XMLHttpRequest){
+	xhr = new window.XMLHttpRequest();
+	}else{
+	xhr = new ActiveObject("Microsoft")
+	}
+
+	xhr.open("GET","/",false)
+	xhr.send(null);
+	var date = xhr.getResponseHeader("Date");
+	date = new Date(date);
+	return date;
+};
+
 
 //开奖数据
 data[0] = {
@@ -124,6 +140,7 @@ export default
  nextTime,
  curNum,
  nextNum,
+ getServerDate,
 }
 
 </script>

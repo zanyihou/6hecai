@@ -124,10 +124,10 @@
 		methods: {
 			//倒计时
 			getcurTime: function(){
-				var ts = mydata.curTime - (new Date());//计算当前期剩余的毫秒数
+				var ts = mydata.curTime - mydata.getServerDate();//计算当前期剩余的毫秒数
 				//当前期已经开奖了
 				if(ts < 0){
-					ts = mydata.nextTime - (new Date());//计算下一期剩余的毫秒数
+					ts = mydata.nextTime - mydata.getServerDate();//计算下一期剩余的毫秒数
 					//如果正在开奖过程中跳过下面的赋值
 					if(this.beingBool){
 						return;

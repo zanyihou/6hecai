@@ -195,7 +195,9 @@
 				 }
 
 				 //判断是否开了当前期，如果开了则在历史记录里面追加
-				 if(mydata.curTime - (new Date()) < 0){
+				 //if(mydata.curTime - (new Date()) < 0)
+				 if((mydata.curTime - mydata.getServerDate()) < 0)
+				 {
 				 	let Record = mydata.data[mydata.data.length-1];
 				 	this.historydata.push(Record);
 				 }
