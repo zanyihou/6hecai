@@ -11,9 +11,9 @@ var bIsCE= sUserAgent.match(/windows ce/i) == "windows ce";
 var bIsWM= sUserAgent.match(/windows mobile/i) == "windows mobile"; 
  
 if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) { 
-window.location.href= '手机站链接'; 
+window.location.href= './web/dist/index.html'; 
 } else { 
-window.location= 'PC站链接'; 
+window.location= './pc/pc/index.html'; 
 } 
 } 
 browserRedirect(); 
