@@ -129,7 +129,7 @@ function getDisTime(){
 	{
 		data = 0;
 	}
-	date2 = new Date();
+	data2 = new Date();
 	localStorage.distime = data2 - data;
 }
 getDisTime();
