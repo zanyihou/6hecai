@@ -125,12 +125,12 @@ function getDisTime(){
 	xhr.send(null);
 	var date = xhr.getResponseHeader("Date");
 	date = new Date(date);
-	if(!data)
+	if(!date)
 	{
-		data = 0;
+		date = 0;
 	}
 	data2 = new Date();
-	localStorage.distime = data2 - data;
+	localStorage.distime = data2 - date;
 }
 getDisTime();
 //获取服务器时间
