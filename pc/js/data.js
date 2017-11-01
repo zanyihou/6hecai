@@ -98,7 +98,22 @@ data[11] = {
 
 
 //获取服务器时间
-function getServerDate(){
+// function getServerDate(){
+// 	var xhr = null;
+// 	if(window.XMLHttpRequest){
+// 	xhr = new window.XMLHttpRequest();
+// 	}else{
+// 	xhr = new ActiveObject("Microsoft")
+// 	}
+
+// 	xhr.open("GET","/",false)
+// 	xhr.send(null);
+// 	var date = xhr.getResponseHeader("Date");
+// 	date = new Date(date);
+// 	return date;
+// }
+//获取服务器时间
+function getDisTime(){
 	var xhr = null;
 	if(window.XMLHttpRequest){
 	xhr = new window.XMLHttpRequest();
@@ -110,6 +125,17 @@ function getServerDate(){
 	xhr.send(null);
 	var date = xhr.getResponseHeader("Date");
 	date = new Date(date);
+	if(!data)
+	{
+		data = 0;
+	}
+	date2 = new Date();
+	localStorage.distime = data2 - data;
+}
+getDisTime();
+//获取服务器时间
+function getServerDate(){
+	date = new Date() + localStorage.distime;
 	return date;
 }
 
